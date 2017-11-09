@@ -1,0 +1,925 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY so "http://moviedb.org/scriptontology/" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://moviedb.org/scriptontology/"
+     xml:base="http://moviedb.org/scriptontology/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:so="http://moviedb.org/scriptontology/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about=""/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://moviedb.org/scriptontology/addressedTo -->
+
+    <owl:ObjectProperty rdf:about="addressedTo"/>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/depicts -->
+
+    <owl:ObjectProperty rdf:about="depicts"/>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/happens -->
+
+    <owl:ObjectProperty rdf:about="happens"/>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/hasDirector -->
+
+    <owl:ObjectProperty rdf:about="hasDirector"/>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/hasPart -->
+
+    <owl:ObjectProperty rdf:about="hasPart"/>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/hasRole -->
+
+    <owl:ObjectProperty rdf:about="hasRole"/>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/inLanguage -->
+
+    <owl:ObjectProperty rdf:about="inLanguage"/>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/isNextOf -->
+
+    <owl:ObjectProperty rdf:about="isNextOf"/>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/performedBy -->
+
+    <owl:ObjectProperty rdf:about="performedBy">
+        <rdfs:range rdf:resource="Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/startsWith -->
+
+    <owl:ObjectProperty rdf:about="startsWith"/>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/takesPlaceIn -->
+
+    <owl:ObjectProperty rdf:about="takesPlaceIn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://moviedb.org/scriptontology/date -->
+
+    <owl:DatatypeProperty rdf:about="date">
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/description -->
+
+    <owl:DatatypeProperty rdf:about="description">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/duration -->
+
+    <owl:DatatypeProperty rdf:about="duration">
+        <rdfs:range rdf:resource="&xsd;time"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/name -->
+
+    <owl:DatatypeProperty rdf:about="name">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/startTime -->
+
+    <owl:DatatypeProperty rdf:about="startTime">
+        <rdfs:range rdf:resource="&xsd;time"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/text -->
+
+    <owl:DatatypeProperty rdf:about="text">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/title -->
+
+    <owl:DatatypeProperty rdf:about="title">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://moviedb.org/scriptontology/Act -->
+
+    <owl:Class rdf:about="Act"/>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/AmericanShot -->
+
+    <owl:Class rdf:about="AmericanShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/BigCloseUpShot -->
+
+    <owl:Class rdf:about="BigCloseUpShot">
+        <rdfs:subClassOf rdf:resource="CloseUpShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/BirdsEyeShot -->
+
+    <owl:Class rdf:about="BirdsEyeShot">
+        <rdfs:subClassOf rdf:resource="HighAngleShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/BodyAct -->
+
+    <owl:Class rdf:about="BodyAct">
+        <rdfs:subClassOf rdf:resource="HumanAct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/CloseUpShot -->
+
+    <owl:Class rdf:about="CloseUpShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/CraneShot -->
+
+    <owl:Class rdf:about="CraneShot">
+        <rdfs:subClassOf rdf:resource="MovingShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/CryingAct -->
+
+    <owl:Class rdf:about="CryingAct">
+        <rdfs:subClassOf rdf:resource="HumanExpressionAct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/CutAwayShot -->
+
+    <owl:Class rdf:about="CutAwayShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/CutInShot -->
+
+    <owl:Class rdf:about="CutInShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/DawnScene -->
+
+    <owl:Class rdf:about="DawnScene">
+        <rdfs:subClassOf rdf:resource="Scene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/DayScene -->
+
+    <owl:Class rdf:about="DayScene">
+        <rdfs:subClassOf rdf:resource="Scene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/DissolveScene -->
+
+    <owl:Class rdf:about="DissolveScene">
+        <rdfs:subClassOf rdf:resource="Scene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/DollyInShot -->
+
+    <owl:Class rdf:about="DollyInShot">
+        <rdfs:subClassOf rdf:resource="DollyShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/DollyOutShot -->
+
+    <owl:Class rdf:about="DollyOutShot">
+        <rdfs:subClassOf rdf:resource="DollyShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/DollyShot -->
+
+    <owl:Class rdf:about="DollyShot">
+        <rdfs:subClassOf rdf:resource="MovingShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/DuskScene -->
+
+    <owl:Class rdf:about="DuskScene">
+        <rdfs:subClassOf rdf:resource="Scene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/DutchAngleShot -->
+
+    <owl:Class rdf:about="DutchAngleShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/EatingAct -->
+
+    <owl:Class rdf:about="EatingAct">
+        <rdfs:subClassOf rdf:resource="BodyAct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/EstablishingShot -->
+
+    <owl:Class rdf:about="EstablishingShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/EveningScene -->
+
+    <owl:Class rdf:about="EveningScene">
+        <rdfs:subClassOf rdf:resource="Scene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/Event -->
+
+    <owl:Class rdf:about="Event">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/ExternalScene -->
+
+    <owl:Class rdf:about="ExternalScene">
+        <rdfs:subClassOf rdf:resource="Scene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/ExtremeCloseUpShot -->
+
+    <owl:Class rdf:about="ExtremeCloseUpShot">
+        <rdfs:subClassOf rdf:resource="CloseUpShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/ExtremeHighAngleShot -->
+
+    <owl:Class rdf:about="ExtremeHighAngleShot">
+        <rdfs:subClassOf rdf:resource="HighAngleShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/ExtremeLongShot -->
+
+    <owl:Class rdf:about="ExtremeLongShot">
+        <rdfs:subClassOf rdf:resource="LongShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/ExtremeLowAngleShot -->
+
+    <owl:Class rdf:about="ExtremeLowAngleShot">
+        <rdfs:subClassOf rdf:resource="LowAngleShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/ExtremeWideShot -->
+
+    <owl:Class rdf:about="ExtremeWideShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/EyeLevelShot -->
+
+    <owl:Class rdf:about="EyeLevelShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/FadeInScene -->
+
+    <owl:Class rdf:about="FadeInScene">
+        <rdfs:subClassOf rdf:resource="Scene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/FadeInShot -->
+
+    <owl:Class rdf:about="FadeInShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/FadeOutScene -->
+
+    <owl:Class rdf:about="FadeOutScene">
+        <rdfs:subClassOf rdf:resource="Scene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/FadeOutShot -->
+
+    <owl:Class rdf:about="FadeOutShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/FightingAct -->
+
+    <owl:Class rdf:about="FightingAct">
+        <rdfs:subClassOf rdf:resource="BodyAct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/FlashPanShot -->
+
+    <owl:Class rdf:about="FlashPanShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/FlashbackScene -->
+
+    <owl:Class rdf:about="FlashbackScene">
+        <rdfs:subClassOf rdf:resource="Scene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/FullLengthShot -->
+
+    <owl:Class rdf:about="FullLengthShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/FullShot -->
+
+    <owl:Class rdf:about="FullShot">
+        <rdfs:subClassOf rdf:resource="EstablishingShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/HandHeldShot -->
+
+    <owl:Class rdf:about="HandHeldShot">
+        <rdfs:subClassOf rdf:resource="MovingShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/HighAngleShot -->
+
+    <owl:Class rdf:about="HighAngleShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/HumanAct -->
+
+    <owl:Class rdf:about="HumanAct">
+        <rdfs:subClassOf rdf:resource="Act"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/HumanExpressionAct -->
+
+    <owl:Class rdf:about="HumanExpressionAct">
+        <rdfs:subClassOf rdf:resource="HumanAct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/IntercutScene -->
+
+    <owl:Class rdf:about="IntercutScene">
+        <rdfs:subClassOf rdf:resource="Scene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/InternalScene -->
+
+    <owl:Class rdf:about="InternalScene">
+        <rdfs:subClassOf rdf:resource="Scene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/LaughingAct -->
+
+    <owl:Class rdf:about="LaughingAct">
+        <rdfs:subClassOf rdf:resource="HumanExpressionAct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/LongShot -->
+
+    <owl:Class rdf:about="LongShot">
+        <owl:equivalentClass rdf:resource="FullShot"/>
+        <rdfs:subClassOf rdf:resource="EstablishingShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/LongTakeShot -->
+
+    <owl:Class rdf:about="LongTakeShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/LowAngleShot -->
+
+    <owl:Class rdf:about="LowAngleShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/MasterShot -->
+
+    <owl:Class rdf:about="MasterShot">
+        <owl:equivalentClass rdf:resource="EstablishingShot"/>
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/MediumCloseUpShot -->
+
+    <owl:Class rdf:about="MediumCloseUpShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/MediumLongShot -->
+
+    <owl:Class rdf:about="MediumLongShot">
+        <owl:equivalentClass rdf:resource="AmericanShot"/>
+        <owl:equivalentClass rdf:resource="FullLengthShot"/>
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/MediumShot -->
+
+    <owl:Class rdf:about="MediumShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/MediumWideShot -->
+
+    <owl:Class rdf:about="MediumWideShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/Montage -->
+
+    <owl:Class rdf:about="Montage"/>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/Movie -->
+
+    <owl:Class rdf:about="Movie"/>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/MovieCharacter -->
+
+    <owl:Class rdf:about="MovieCharacter">
+        <rdfs:subClassOf rdf:resource="Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/MovingShot -->
+
+    <owl:Class rdf:about="MovingShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/NightScene -->
+
+    <owl:Class rdf:about="NightScene">
+        <rdfs:subClassOf rdf:resource="Scene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/ObliqueAngleShot -->
+
+    <owl:Class rdf:about="ObliqueAngleShot">
+        <owl:equivalentClass rdf:resource="DutchAngleShot"/>
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/OverTheShoulderShot -->
+
+    <owl:Class rdf:about="OverTheShoulderShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/OverheadShot -->
+
+    <owl:Class rdf:about="OverheadShot">
+        <owl:equivalentClass rdf:resource="BirdsEyeShot"/>
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/PanShot -->
+
+    <owl:Class rdf:about="PanShot">
+        <rdfs:subClassOf rdf:resource="MovingShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/PeopleShot -->
+
+    <owl:Class rdf:about="PeopleShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/Person -->
+
+    <owl:Class rdf:about="Person"/>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/PointOfViewShot -->
+
+    <owl:Class rdf:about="PointOfViewShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/ProfileView -->
+
+    <owl:Class rdf:about="ProfileView">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/RunningAct -->
+
+    <owl:Class rdf:about="RunningAct">
+        <rdfs:subClassOf rdf:resource="BodyAct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/Scene -->
+
+    <owl:Class rdf:about="Scene"/>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/ScreamingAct -->
+
+    <owl:Class rdf:about="ScreamingAct">
+        <rdfs:subClassOf rdf:resource="HumanExpressionAct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/Shot -->
+
+    <owl:Class rdf:about="Shot"/>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/ShoutingAct -->
+
+    <owl:Class rdf:about="ShoutingAct">
+        <rdfs:subClassOf rdf:resource="HumanExpressionAct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/SideView -->
+
+    <owl:Class rdf:about="SideView">
+        <owl:equivalentClass rdf:resource="ProfileView"/>
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/SittingAct -->
+
+    <owl:Class rdf:about="SittingAct">
+        <rdfs:subClassOf rdf:resource="BodyAct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/SleepingAct -->
+
+    <owl:Class rdf:about="SleepingAct">
+        <rdfs:subClassOf rdf:resource="BodyAct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/SpeakingAct -->
+
+    <owl:Class rdf:about="SpeakingAct">
+        <rdfs:subClassOf rdf:resource="HumanExpressionAct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/StockShot -->
+
+    <owl:Class rdf:about="StockShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/SubjectiveShot -->
+
+    <owl:Class rdf:about="SubjectiveShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/ThreeQuarterShot -->
+
+    <owl:Class rdf:about="ThreeQuarterShot">
+        <owl:equivalentClass rdf:resource="MediumLongShot"/>
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/ThreeShot -->
+
+    <owl:Class rdf:about="ThreeShot">
+        <rdfs:subClassOf rdf:resource="PeopleShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/TiltShot -->
+
+    <owl:Class rdf:about="TiltShot">
+        <rdfs:subClassOf rdf:resource="MovingShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/TrackingShot -->
+
+    <owl:Class rdf:about="TrackingShot">
+        <rdfs:subClassOf rdf:resource="MovingShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/TwoShot -->
+
+    <owl:Class rdf:about="TwoShot">
+        <rdfs:subClassOf rdf:resource="PeopleShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/VeryCloseUpShot -->
+
+    <owl:Class rdf:about="VeryCloseUpShot">
+        <rdfs:subClassOf rdf:resource="CloseUpShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/VeryWideShot -->
+
+    <owl:Class rdf:about="VeryWideShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/VoiceOverSpeakingAct -->
+
+    <owl:Class rdf:about="VoiceOverSpeakingAct">
+        <rdfs:subClassOf rdf:resource="SpeakingAct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/WalkingAct -->
+
+    <owl:Class rdf:about="WalkingAct">
+        <rdfs:subClassOf rdf:resource="BodyAct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/WideLongShot -->
+
+    <owl:Class rdf:about="WideLongShot">
+        <rdfs:subClassOf rdf:resource="Shot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/WideShot -->
+
+    <owl:Class rdf:about="WideShot">
+        <owl:equivalentClass rdf:resource="FullShot"/>
+        <rdfs:subClassOf rdf:resource="EstablishingShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/ZipPanShot -->
+
+    <owl:Class rdf:about="ZipPanShot">
+        <owl:equivalentClass rdf:resource="FlashPanShot"/>
+        <rdfs:subClassOf rdf:resource="PanShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/ZoomInShot -->
+
+    <owl:Class rdf:about="ZoomInShot">
+        <rdfs:subClassOf rdf:resource="ZoomShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/ZoomOutShot -->
+
+    <owl:Class rdf:about="ZoomOutShot">
+        <rdfs:subClassOf rdf:resource="ZoomShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://moviedb.org/scriptontology/ZoomShot -->
+
+    <owl:Class rdf:about="ZoomShot">
+        <rdfs:subClassOf rdf:resource="MovingShot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1101) http://owlapi.sourceforge.net -->
+
